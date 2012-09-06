@@ -2,6 +2,8 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
+ifneq ($(filter tf300tg,$(TARGET_DEVICE)),)
+
 LOCAL_SHARED_LIBRARIES := \
     libutils
 
@@ -39,3 +41,4 @@ include $(BUILD_EXECUTABLE)
 
 
 
+endif
